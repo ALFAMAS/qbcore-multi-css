@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 Citizen.CreateThread(function()
 	local HouseGarages = {}
-	QBCore.Functions.ExecuteSql(false, "SELECT * FROM `houselocations`", function(result)
+	exports.oxmysql:execute(false, "SELECT * FROM `houselocations`", function(result)
 		if result[1] ~= nil then
 			for k, v in pairs(result) do
 				local owned = false
@@ -33,7 +33,7 @@ end)
 
 QBCore.Functions.CreateCallback('qb-spawn:server:getOwnedHouses', function(source, cb, cid)
 	if cid ~= nil then
-		QBCore.Functions.ExecuteSql(false, 'SELECT * FROM `player_houses` WHERE `citizenid` = "'..cid..'"', function(houses)
+		exports.oxmysql:execute(false, 'SELECT * FROM `player_houses` WHERE `citizenid` = "'..cid..'"', function(houses)
 			if houses[1] ~= nil then
 				cb(houses)
 			else
@@ -45,7 +45,9 @@ QBCore.Functions.CreateCallback('qb-spawn:server:getOwnedHouses', function(sourc
 	end
 end)
 
--- QBCore.Commands.Add("testloc", "Een race stoppen als creator.", {}, false, function(source, args)
+-- For Testing
+
+-- QBCore.Commands.Add("spawn", "Een race stoppen als creator.", {}, false, function(source, args)
 -- 	local src = source
 -- 	local Player = QBCore.Functions.GetPlayer(src)
 -- 	TriggerClientEvent('qb-spawn:client:setupSpawns', src, Player, false, {})
