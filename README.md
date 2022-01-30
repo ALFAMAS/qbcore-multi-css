@@ -3,7 +3,7 @@
 
 ### Preview New Interior : https://youtu.be/
 
-![Preview] (https://i.imgur.com/cjKKseF.png)
+[Preview] (https://i.imgur.com/cjKKseF.png)
 
 ### Preview Old Interior : https://youtu.be/GG_9eDq1u1E
 
