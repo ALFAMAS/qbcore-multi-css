@@ -1,7 +1,7 @@
 # [QBCore] [Multicharacter](https://github.com/qbcore-framework/qb-multicharacter) Reworked CSS
 # For Latest QBCore Public Server
 
-### Preview New Interior : https://youtu.be/
+### Preview New Interior : https://i.imgur.com/cjKKseF.png
 
 ![Preview](https://i.imgur.com/cjKKseF.png)
 
